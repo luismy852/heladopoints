@@ -91,8 +91,8 @@ export class Dashboard {
         } else if (msg.includes('the image does not appear to be a valid official receipt.')) {
           this.message = "La imagen no parece ser una factura válida.";
         }else if(msg.includes('10MB')){
-          this.message = 'La imagen es muy pesada el peso maximo son 10MB';
-        } else if(msg.includes('Está factura ya fue subida')){
+          this.message = 'La imagen es muy pesada el peso máximo son 10MB';
+        } else if(msg.includes('Esta factura ya fue subida')){
           this.message = msg;
         }
         else {
