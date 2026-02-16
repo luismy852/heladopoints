@@ -1,0 +1,10 @@
+back/target/ 
+back/.mvn/ 
+front/node_modules/ 
+front/dist/ 
+.env 
+back/target/ 
+back/.mvn/ 
+front/node_modules/ 
+front/dist/ 
+.env 
