@@ -1,0 +1,55 @@
+<header>
+    <img class="logo" src="logopoints.png" alt="">
+    <p class="info">Hola <strong> {{userInfo.username}}</strong>, Tienes {{userInfo.points}} puntos</p>
+
+    <nav>
+        <a (click)="closeSession()"> Cerrar Sesión</a>
+    </nav>
+</header>
+
+<main>
+  <input type="file" 
+       accept="image/*" 
+       capture="environment" 
+       #fileInput 
+       (change)="onFileSelected($event, fileInput)" 
+       style="display: none">
+
+    <div class="scanner__conteiner">
+    <div class="scan" (click)="fileInput.click()" style="cursor: pointer;">
+        <img src="scan.png" alt="escaner">
+        <p class="scan__image">Escenear Nueva Factura</p>
+    </div>
+    </div>
+
+
+    <h2>Historial</h2>
+    <div class="histories">
+      @for (history of histories; track history.id) {
+    <div class="history">
+      <p class="date">{{ history.date | date:'dd/MM/yyyy' }}</p>
+      <p class="success">{{ history.success ? '✅ Aprobado' : '❌ Fallido' }}</p>
+    </div>
+
+    }
+    </div>
+
+    <section class="modal" id="modal"
+[class.modal--show]="showModal">
+
+    <div class="modal__contenedor">
+      @if (!finish) {
+        <img src="Loading.gif" alt="">
+      }@else {
+        <img class="result" src={{image}} alt="">
+        <p>{{message}}</p>
+        <button (click)="closeModal()" class="cerrar">Cerrar</button>
+      }
+      
+        
+    </div>
+  
+
+</section>
+
+</main>

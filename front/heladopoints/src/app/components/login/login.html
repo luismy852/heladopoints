@@ -1,0 +1,22 @@
+<app-header></app-header>
+<main>
+    <img src="logopoints.png" alt="logo">
+
+<form (ngSubmit)="onLogin()">
+    <label for="email">Correo electronico</label>
+    <input [(ngModel)]="user.email" type="email" name="email" id="email">
+
+    <label for="password">Contraseña</label>
+    <input [(ngModel)]="user.password" type="password" name="password" id="password">
+
+    <div class="conteiner__button">
+       <button type="submit">Ingresar</button> 
+    </div>
+
+    @if (error) {
+        <p>{{errorMessage}}</p>
+    }
+    
+</form>
+
+</main>

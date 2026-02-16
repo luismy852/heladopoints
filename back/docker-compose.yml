@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  heladopoints:
+    build: heladopoints
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: ${DB_URL}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      API_URL: ${API_URL}
+
+    restart: always

@@ -1,0 +1,53 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    height: 371px;
+    margin-bottom: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    label{
+        font-size: 28px;
+    }
+
+    input{
+        width: 450px;
+        height: 40px;
+        border-radius: 15px;
+    }
+
+    margin-bottom: 100px;
+
+    button{
+        margin-top: 20px;
+        background-color: #FAD180;
+        width: 127px;
+        height: 50px;
+        border-radius: 15px;
+    }
+}
+
+.conteiner__button{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px){
+    img{
+        height: 200px;
+        margin-top: 15px;
+    }
+
+    form{
+        input{
+            width: 100%;
+        }
+    }
+}

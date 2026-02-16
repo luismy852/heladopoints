@@ -1,0 +1,156 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.logo{
+        height: 174px;
+
+}
+
+.info{
+    font-size: 32px;
+}
+
+.scanner__conteiner{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.scan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 60%;
+
+    img{
+        width: 206px;
+    }
+
+    p{
+        font-size: 56px;
+    }
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.histories{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.history{
+    display: flex;
+    justify-content: space-between;
+    width: 1058px;
+    background-color: #FAD180;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+
+    background-color: #111111bd;
+
+        button{
+        margin-top: 20px;
+        background-color: #FAD180;
+        width: 127px;
+        height: 50px;
+        border-radius: 15px;
+    }
+
+}
+
+.modal__contenedor{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.result{
+    width: 25%;
+}
+
+
+@media (max-width: 1100px){
+    .history{
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px){
+    .info{
+        font-size: 20px;
+    }
+
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+        .modal__contenedor{
+    width: 60%;
+    height: 40%;
+
+}
+}
+
+@media (max-width: 600px){
+    .scan__image{
+        display: none;
+    }
+
+    .info{
+        text-align: center;
+    }
+
+    .modal__contenedor{
+    width: 60%;
+    height: 30%;
+    p{
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+
+}
