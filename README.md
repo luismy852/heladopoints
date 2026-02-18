@@ -19,6 +19,15 @@ Despliegue: GitHub Pages.
 
 ## Autenticación con Spring Security & JWT
 
+
+El sistema utiliza un esquema de seguridad stateless para proteger la integridad de los puntos de los usuarios:
+
+- JWT (JSON Web Tokens): Implementado para manejar sesiones de usuario de forma segura sin sobrecargar el servidor.
+
+- Encriptación: Uso de BCrypt para asegurar que las contraseñas nunca se almacenen en texto plano.
+
+## Arquitectura y Flujo de Validación (Backend Focus)
+
 El sistema no solo procesa imágenes; implementa un pipeline de validación diseñado para garantizar la consistencia de los datos:
 
 - Optimización de Carga (Client-Side): Validación de payload en el frontend para asegurar integridad de archivos (límite de 10MB) y reducir latencia en el servidor.
